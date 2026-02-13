@@ -1,0 +1,75 @@
+# Flutter & Dart Command Cheat Sheet
+
+Una guida rapida ai comandi essenziali per lo sviluppo cross-platform.
+
+---
+
+## Diagnostica e Setup
+| Comando | Descrizione |
+| :--- | :--- |
+| flutter doctor | Verifica l'installazione e mostra i componenti mancanti. |
+| flutter doctor -v | Modalità dettagliata della diagnostica. |
+| flutter upgrade | Aggiorna l'SDK di Flutter alla versione più recente. |
+| flutter devices | Elenca tutti i dispositivi, emulatori e browser connessi. |
+
+---
+
+## Gestione del Progetto
+* **Creazione:** flutter create nome_app
+* **Dipendenze:**
+    * flutter pub get: Scarica i pacchetti definiti in pubspec.yaml.
+    * flutter pub add <nome_pacchetto>: Aggiunge una dipendenza al progetto.
+    * flutter pub outdated: Controlla le versioni dei pacchetti aggiornabili.
+* **Pulizia:** flutter clean (Rimuove la cartella /build e la cache).
+
+---
+
+## Esecuzione e Debug
+Comandi da utilizzare durante lo sviluppo:
+
+* flutter run: Avvia l'app sul dispositivo predefinito.
+* flutter run -d all: Avvia l'app su tutti i dispositivi connessi contemporaneamente.
+* flutter run --release: Avvia l'app in modalità prestazioni (senza debug).
+* **Comandi Interattivi (in console durante l'esecuzione):**
+    * r: Hot Reload (aggiorna l'interfaccia mantenendo lo stato).
+    * R: Hot Restart (riavvia l'app resettando lo stato).
+    * q: Chiude l'app e termina il processo.
+
+---
+
+## Build e Distribuzione
+Generazione dei file per il rilascio.
+
+### Android
+* flutter build apk: Genera il file installer .apk.
+* flutter build appbundle: Genera il file .aab per Google Play Store.
+
+### iOS (Richiede macOS e Xcode)
+* flutter build ios: Prepara il bundle per l'invio ad App Store.
+* flutter build ipa: Crea l'archivio definitivo .ipa.
+
+### Web e Desktop
+* flutter build web: Compila il progetto per il browser.
+* flutter build windows: Genera l'eseguibile per Windows.
+* flutter build macos: Genera l'applicazione per macOS.
+
+---
+
+## Comandi Dart (Core)
+Utilizzati per la gestione del codice e della logica:
+
+* dart format .: Formatta tutto il codice secondo le convenzioni ufficiali.
+* dart analyze: Analizza il codice alla ricerca di errori o avvisi.
+* dart fix --apply: Applica automaticamente le correzioni suggerite.
+* dart test: Esegue i test unitari di Dart.
+
+---
+
+## Testing e Qualità
+* flutter test: Esegue i test dei widget e i test unitari del progetto.
+* flutter test test/nome_file_test.dart: Esegue un singolo file di test specifico.
+* flutter screenshot: Cattura un'immagine dell'app in esecuzione.
+
+---
+
+Nota: Se utilizzi FVM (Flutter Version Manager) per gestire più versioni dell'SDK, anteponi il comando "fvm" a ogni istruzione sopra elencata.
